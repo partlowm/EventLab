@@ -10,11 +10,13 @@ namespace EventLab.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+       
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
-
+        public DbSet<Event> Event { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

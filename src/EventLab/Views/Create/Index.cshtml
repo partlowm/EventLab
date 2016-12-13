@@ -1,0 +1,73 @@
+﻿@model IEnumerable<EventLab.Models.Event>
+
+@{ ViewData["Title"] = "Create or Cancel Event";}
+
+<h1>List of Your Events</h1>
+<br />
+<table class="table">
+
+    
+
+        <tr>
+            <td>Month</td>
+            @foreach (var theEvent in Model)
+            {
+            <td>@theEvent.Month</td>
+            }
+        <tr>
+            <td>Day</td>
+            @foreach (var theEvent in Model)
+            {
+                <td>@theEvent.Day</td>
+            }
+        </tr>
+        <tr>
+            <td>Year</td>
+            @foreach (var theEvent in Model)
+            {
+                <td>@theEvent.Year</td>
+            }
+        </tr>
+        <tr>
+            <td>Location</td>
+            @foreach (var theEvent in Model)
+            {
+                <td>@theEvent.Location</td>
+            }
+        </tr>
+
+    <tr>
+        <td>Time</td>
+        @foreach (var theEvent in Model)
+            {
+            <td>@theEvent.Time</td>
+        }
+    </tr>
+
+    <tr>
+        <td>Edit/Cancel</td>
+        @foreach (var theEvent in Model)
+            {
+           <td> <form class="inline" asp-route-id="@theEvent.EventID" method="post">
+
+                <a class="btn btn-default" asp-action="Edit" asp-route-id="@theEvent.EventID">Edit</a>
+                <a class="btn btn-default" asp-action="Cancel" asp-route-id="@theEvent.EventID">Cancel</a>
+
+            </form></td>
+        }
+    </tr>
+
+               
+            
+        
+
+</table>
+
+
+
+    <div class="row">
+        <br />
+        <div>
+            <a class="btn btn-success btn-lg col-md-3" href="http://localhost:64471/Create/Create">Create an Event</a>
+        </div>
+    </div>

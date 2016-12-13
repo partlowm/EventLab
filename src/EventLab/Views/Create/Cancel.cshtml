@@ -1,0 +1,15 @@
+﻿@model EventLab.Models.Event
+@{
+    ViewBag.Title = "Cancel/Remove";
+}
+<h1>Concel and Remove Event?</h1>
+<div class="form">
+    <form asp-action="Cancel" class="form-horizontal">
+        <p>Event: @Model.Month @Model.Day, @Model.Year </p>
+        <p>Time: @Model.Time</p>
+        <div class="form-group">
+            <input type="submit" value="Cancel" class="btn-success" />
+            <a class="btn btn-default" href="http://localhost:64471/Create">Back</a>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<EventLab.Models.Event>
+
+@{ ViewData["Title"] = "All Current Events";}
+
+<h1>List Of All Events</h1>
+<br />
+<table class="table">
+
+    <tr>
+        <td>Month</td>
+        @foreach (var theEvent in Model)
+            {
+            <td>@theEvent.Month</td>
+        }
+    <tr>
+        <td>Day</td>
+        @foreach (var theEvent in Model)
+            {
+            <td>@theEvent.Day</td>
+        }
+    </tr>
+    <tr>
+        <td>Year</td>
+        @foreach (var theEvent in Model)
+            {
+            <td>@theEvent.Year</td>
+        }
+    </tr>
+    <tr>
+        <td>Location</td>
+        @foreach (var theEvent in Model)
+            {
+            <td>@theEvent.Location</td>
+        }
+    </tr>
+
+    <tr>
+        <td>Time</td>
+        @foreach (var theEvent in Model)
+            {
+            <td>@theEvent.Time</td>
+        }
+    </tr>
+    <tr>
+        <td>Click Button To Attend</td>
+        @foreach (var theEvent in Model)
+            {
+            <td>
+                <form class="inline" asp-route-id="@theEvent.EventID" method="post">
+
+                    <a class="btn btn-default" asp-action="Attend" asp-route-id="@theEvent.EventID">Attend</a>
+
+                </form>
+            </td>
+        }
+    </tr>
+</table>
+

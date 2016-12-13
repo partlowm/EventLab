@@ -1,7 +1,8 @@
-﻿{
+{
   "userSecretsId": "aspnet-EventLab-2b0e8d66-a69b-4f72-b894-1240b69820ef",
 
   "dependencies": {
+    "Microsoft.AspNet.Identity.Core": "2.2.1",
     "Microsoft.AspNetCore.Authentication.Cookies": "1.0.0",
     "Microsoft.AspNetCore.Diagnostics": "1.0.0",
     "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "1.0.0",
@@ -15,6 +16,7 @@
     "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0",
     "Microsoft.AspNetCore.Server.Kestrel": "1.0.1",
     "Microsoft.AspNetCore.StaticFiles": "1.0.0",
+    "Microsoft.EntityFrameworkCore.Relational": "1.0.1",
     "Microsoft.EntityFrameworkCore.SqlServer": "1.0.1",
     "Microsoft.EntityFrameworkCore.SqlServer.Design": {
       "version": "1.0.1",
